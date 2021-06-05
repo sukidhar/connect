@@ -53,10 +53,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.peer = new Peer(uuidv4(),{
-      host: '172.20.10.2',
-      port : 9000,
-      path : '/',
-      secure : false,
+      host: "mad-project-android.herokuapp.com",
+      port : 443,
+      secure : true,
     })
 
     
