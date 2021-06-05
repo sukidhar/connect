@@ -1,0 +1,19 @@
+<div>
+    <video class="main-video-container" 
+    [srcObject] = "mainVideo.srcObject"
+    (loadedmetadata)="onLoadedMetadata($event)"
+    [muted]="mainVideo.muted"
+    ></video>
+    <h5 class= "main-video-title">{{mainVideo.userName}}</h5>
+    <div class="scroller">
+        <ul style="list-style: none">
+            <li *ngFor="let video of videos" (click)="onClick(video)" class="video-container">
+                <video class="video"
+                 [srcObject]=video.srcObject
+                 (loadedmetadata)="onLoadedMetadata($event)"
+                ></video>
+                <h4 class="video-title">{{video.userName}}</h4>
+            </li>
+        </ul>
+    </div>
+</div>
