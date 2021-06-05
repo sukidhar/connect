@@ -147,7 +147,7 @@ export class HomeComponent implements OnInit {
       return;
     }
     this.videos.push({
-      muted:false,
+      muted: this.videos.length == 0 ? true:false,
       srcObject : videoStream,
       userId : userId,
       userName : username
